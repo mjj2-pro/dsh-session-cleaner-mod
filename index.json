@@ -1,0 +1,91 @@
+{
+  "format": 1,
+  "title": {
+    "en": "mjj2-pro DSH Plugins",
+    "zh": "mjj2-pro 的 DSH 插件"
+  },
+  "description": {
+    "en": "Independent builds of DSH bundles, with the reasons and measurements behind each change.",
+    "zh": "自用的 DSH 插件改造版，每一处改动都有实测数据与取舍记录。"
+  },
+  "metadata": {
+    "categories": {
+      "sessions": {
+        "title": {
+          "en": "Sessions & messages",
+          "zh": "会话与消息"
+        }
+      }
+    },
+    "labels": {
+      "modified-build": {
+        "title": {
+          "en": "Modified build",
+          "zh": "改造版"
+        }
+      }
+    },
+    "sortKeys": {
+      "updated": {
+        "title": {
+          "en": "Updated",
+          "zh": "更新时间"
+        },
+        "order": "desc"
+      }
+    }
+  },
+  "plugins": [
+    {
+      "name": "dsh-session-cleaner",
+      "title": {
+        "en": "Session Cleaner (modified)",
+        "zh": "会话清理（改造版）"
+      },
+      "description": {
+        "en": "True session delete with a 15-day recycle bin: cleans logs, workspace accounting, pins, archive flags, projection cache and schedules; files move into the bin instead of being deleted. Titles match your renames; the list opens in milliseconds.",
+        "zh": "真正的会话删除 + 15 天回收站：清日志、工作区记账、置顶、归档标记、投影缓存与定时任务；产出文件搬进回收站而不是删除。标题与你改的名字一致，列表毫秒级打开。"
+      },
+      "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsbGVkYnk9InNjLXRpdGxlIj4NCiAgPHRpdGxlIGlkPSJzYy10aXRsZSI+5Lya6K+d5riF55CGPC90aXRsZT4NCiAgPGRlZnM+DQogICAgPCEtLSDkuLvkvZPmuJDlj5jvvJrpnZIg4oaSIOe7vyDihpIg6buE57u/77yI5bem5LiK5Yiw5Y+z5LiL77yJ77yM5LiOIG1vZGVsLXByb3h5IOeahOiTneKGkue0q+WQjOS4gOWll+e6v+adoea4kOWPmOivreiogOOAgeaNouiJsuebuCAtLT4NCiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InNjLWxpbmUiIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj4NCiAgICAgIDxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzE0YjhhNiIvPg0KICAgICAgPHN0b3Agb2Zmc2V0PSIuNTUiIHN0b3AtY29sb3I9IiMyMmM1NWUiLz4NCiAgICAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzg0Y2MxNiIvPg0KICAgIDwvbGluZWFyR3JhZGllbnQ+DQogIDwvZGVmcz4NCiAgPCEtLSDmuIXmtIHmmJ/oipLvvIjlkbzlupQgbW9kZWwtcHJveHkg55qE6YCf5bqm57q/54K557yA77yM6K+t5LmJPeW5suWHgO+8iSAtLT4NCiAgPHBhdGggZD0iTTUzIDdsMS4zIDMuN0w1OCAxMmwtMy43IDEuM0w1MyAxN2wtMS4zLTMuN0w0OCAxMmwzLjctMS4zeiIgZmlsbD0idXJsKCNzYy1saW5lKSIgb3BhY2l0eT0iLjg1Ii8+DQogIDwhLS0g5qG255uWIC0tPg0KICA8cGF0aCBkPSJNMTMgMjBINTEiIHN0cm9rZT0idXJsKCNzYy1saW5lKSIgc3Ryb2tlLXdpZHRoPSIzLjQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgZmlsbD0ibm9uZSIvPg0KICA8cGF0aCBkPSJNMjcgMjBhNSA1IDAgMCAxIDEwIDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNzYy1saW5lKSIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4NCiAgPCEtLSDmobbouqvvvIjkuIrlrr3kuIvnqoTvvIzlnIbop5LlupXvvIkgLS0+DQogIDxwYXRoIGQ9Ik0xOCAyNUg0NmwtMy41IDI2UTQyIDUzLjUgNDAgNTMuNUgyNFEyMiA1My41IDIxLjUgNTFMMTggMjVaIiBmaWxsPSJub25lIiBzdHJva2U9InVybCgjc2MtbGluZSkiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPg0KICA8IS0tIOahtui6q+erluWQkeajsee6vyAtLT4NCiAgPHBhdGggZD0iTTI3IDMxdjE1TTM3IDMxdjE1IiBzdHJva2U9InVybCgjc2MtbGluZSkiIHN0cm9rZS13aWR0aD0iMi4yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIGZpbGw9Im5vbmUiIG9wYWNpdHk9Ii42Ii8+DQo8L3N2Zz4NCg==",
+      "author": "mjj2-pro",
+      "homepage": "https://github.com/mjj2-pro/dsh-session-cleaner-mod#readme",
+      "repository": {
+        "url": "https://github.com/mjj2-pro/dsh-session-cleaner-mod"
+      },
+      "metadata": {
+        "category": "sessions",
+        "labels": [
+          "modified-build"
+        ],
+        "keywords": [
+          "dsh",
+          "deepseek-harness",
+          "session",
+          "delete",
+          "recycle-bin",
+          "cleaner"
+        ],
+        "sortKeys": {
+          "updated": 1794124662
+        }
+      },
+      "dist-tags": {
+        "latest": "0.8.1-mod.1"
+      },
+      "versions": [
+        {
+          "version": "0.8.1-mod.1",
+          "publishTimestamp": 1794124662,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/mjj2-pro/dsh-session-cleaner-mod",
+            "commit": "fa11e9ed4cfe4c0dbe6c2bb256b8a0cbed4c9050"
+          },
+          "engines": {
+            "dsh": ">=0.2.1 <0.3.0"
+          }
+        }
+      ]
+    }
+  ]
+}

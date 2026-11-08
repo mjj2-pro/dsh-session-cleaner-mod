@@ -5,8 +5,9 @@
 **这是独立改造版，不是上游的镜像。** 底座来自 [jackxiao17/dsh-session-cleaner](https://github.com/jackxiao17/dsh-session-cleaner) v0.7.7（MIT），删除链路、标题读取、列表性能、界面文案都重做过。不合并上游、不跟上游同步。
 
 - 版本：`0.8.1-mod.1`
-- 适用：DSH 0.2.x（实测 0.2.2-rc.1 / rc.5）
+- 适用：DSH 0.2.x（实测 0.2.1-rc.2）
 - 许可证：MIT（见 [LICENSE](LICENSE) 和 [NOTICE](NOTICE)）
+- 自带插件市场索引：[`index.json`](index.json)（格式 1），可直接添加到 DSH 的「发现」页
 
 ---
 
@@ -140,7 +141,30 @@ lib/client.js   浏览器半：菜单项、悬浮球、三个弹窗、中英语�
 
 ## 装它
 
-DSH 的插件分「宿主半」和「客户端半」，安装方式取决于你的 DSH 版本。当前推荐手动装：
+### 方式一：从插件市场索引安装（推荐）
+
+本仓库根目录自带 [`index.json`](index.json)（插件市场索引格式 1）。在 DSH 里：
+
+1. 打开 **插件 → 发现 → 管理索引源… → 添加**
+2. 填入下面任一个地址：
+
+   ```
+   https://raw.githubusercontent.com/mjj2-pro/dsh-session-cleaner-mod/main/index.json
+   ```
+
+   GitHub 直连不稳时用 CDN：
+
+   ```
+   https://cdn.jsdelivr.net/gh/mjj2-pro/dsh-session-cleaner-mod@main/index.json
+   ```
+
+3. 回到「发现」，会出现「会话清理（改造版）」，点**安装**。
+4. **重启 DSH**（宿主半改动必须重启）。
+
+> 索引由本仓库自己托管：没有中心审核、没有收费，也没有人能把它下架。
+> DSH 的「发现」页会显示索引 URL 和每个版本的来源，只添加你信任的索引。
+
+### 方式二：手动装（索引不可用时）
 
 1. 把整个仓库放到 `<DSH_HOME>/profiles/desktop/local/dsh-session-cleaner`。
 2. 在 profile 的 `package.json` 里加依赖：
@@ -153,8 +177,6 @@ DSH 的插件分「宿主半」和「客户端半」，安装方式取决于你�
 3. 在 profile 目录执行 `pnpm install`。
 4. **重启 DSH**（宿主半改动必须重启，Loader 按包名缓存模块）。
 5. 验证：`GET http://127.0.0.1:<端口>/session-cleaner/api/health` 返回 `{"ok":true,...}`。
-
-> 目前还没上架任何插件市场索引，只能从 Git 仓库安装。
 
 ---
 
