@@ -1,0 +1,37 @@
+dsh-session-cleaner — modified distribution
+===========================================
+
+This distribution is a modified version of:
+
+  jackxiao17/dsh-session-cleaner v0.7.7
+  Copyright (c) 2026 jackxiao17
+  Licensed under the MIT License — full text in LICENSE
+
+Modifications (version 0.8.1-mod.1, 2026-11):
+
+  * Title resolution now folds the last `session/title` event by scanning back to
+    frame 6, instead of only looking at a bounded 160-frame tail window. Results
+    are cached by `mtime:size` and persisted to disk.
+  * Session-list reads are concurrent (16-way), headers are read once per scan,
+    and sessions >= 2 KB are no longer decompressed to decide whether they are
+    blank.
+  * Recycle-bin retention copy corrected to 15 days; the produced-file warning
+    corrected to state that files are moved into the bin and restored with the
+    session.
+  * Startup reconciliation and retention purge are deferred by 15 seconds, and
+    both timers are unref()ed, so the plugin stays off the host's startup I/O path.
+
+Title resolution also draws on ideas and API-usage patterns from:
+
+  xohmai/dsh-session-delete
+  Licensed under the Apache License, Version 2.0
+  A copy of that license is included at licenses/Apache-2.0.txt
+
+  Specifically: reading titles through the host `sessionProjectionCache`
+  (`cachedSnapshot` / `cachedPredecessorTitle`, with `isSeeded` normalised to
+  false), and the two caveats that (a) `sessionQuery.readTitleSnapshots` must be
+  called in a single batch because a per-id call is near-quadratic, and (b) its
+  `title` is a snapshot object rather than a string.
+
+No source code is copied from DeepSeek Harness itself. Its published interfaces
+were read for interoperability only; DeepSeek Harness is MIT-licensed.

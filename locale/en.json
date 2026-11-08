@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Session Cleaner (modified)",
+    "description": "One-click move sessions to a recoverable recycle bin from the sidebar ··· menu — with search, restore, and permanent delete; also cleans pins, archive flags, caches, sub-agent trees, and scheduled tasks. This build reworks title resolution and list performance.",
+    "detail": "locale/detail.en.md"
+  }
+}
